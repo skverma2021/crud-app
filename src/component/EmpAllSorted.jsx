@@ -126,6 +126,22 @@ const COLUMNS = [
       </Button>
     ),
   },
+  {
+    Header: 'Bookings',
+    Footer: 'Bookings',
+    accessor: '',
+    Cell: ({ row }) => (
+      <Button
+        color='primary'
+        variant='contained'
+        style={{ marginRight: 10 }}
+        component={Link}
+        to={`/book/${row.original.id}/6/2023`}
+      >
+        Bookings
+      </Button>
+    ),
+  },
 ];
 const EmpAllSorted = () => {
   const [emps, setEmps] = useState([]);
@@ -145,7 +161,7 @@ const EmpAllSorted = () => {
 
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => emps, [emps]);
-  console.log(data);
+  // console.log(data);
 
   const tableInst = useTable(
     {

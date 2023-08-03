@@ -74,11 +74,43 @@ const COLUMNS = [
       <Button
         color='primary'
         variant='contained'
-        style={{ marginRight: 10 }}
+        style={{ marginRight: 2 }}
         component={Link}
-        to={`/upd/${row.original.id}`}
+        to={`/job/upd/${row.original.id}`}
       >
         Edit
+      </Button>
+    ),
+  },
+  {
+    Header: 'Execution',
+    Footer: 'Execution',
+    accessor: '',
+    Cell: ({ row }) => (
+      <Button
+        color='primary'
+        variant='contained'
+        style={{ marginRight: 2 }}
+        component={Link}
+        to={`/job/ex/${row.original.id}`}
+      >
+        exPlan
+      </Button>
+    ),
+  },
+  {
+    Header: 'ExAdd',
+    Footer: 'ExAdd',
+    accessor: '',
+    Cell: ({ row }) => (
+      <Button
+        color='primary'
+        variant='contained'
+        style={{ marginRight: 2 }}
+        component={Link}
+        to={`/job/exAdd/${row.original.id}`}
+      >
+        addExPlan
       </Button>
     ),
   },
@@ -115,7 +147,7 @@ const JobAll = () => {
 
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => jobs, [jobs]);
-  console.log(data);
+  // console.log(data);
 
   const tableInst = useTable(
     {

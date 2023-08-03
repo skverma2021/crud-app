@@ -1,0 +1,60 @@
+#spreadSheet {
+  padding: 50px;
+  margin: 50px;
+}
+
+#theHeader {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-areas: 'dth jbh acth ';
+  grid-template-columns: 10% 85% 5%;
+  grid-template-rows: 200px;
+}
+
+dth,
+jbh,
+acth {
+  background-color: steelblue;
+  color: #fff;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+#theRow {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-areas: 'dt jb act ';
+  grid-template-columns: 10% 85% 5%;
+  grid-template-rows: 50px;
+}
+
+dt,
+jb,
+act {
+  background-color: steelblue;
+  color: #fff;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: lightgray;
+  /* justify-content: space-around; */
+}
+
+.item {
+  width: 200px;
+  height: 195px;
+  color: black;
+  background-color: white;
+  margin: 2px;
+  /* align-items: center; */
+}

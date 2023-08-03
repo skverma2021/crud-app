@@ -1,0 +1,50 @@
+#theRows {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-areas: 'sl ws deptt start end act';
+  grid-template-columns: 40px 300px 300px 300px 300px 200px;
+  grid-template-rows: 40px;
+}
+
+sl,
+ws,
+deptt,
+start,
+end,
+act {
+  background-color: steelblue;
+  color: #fff;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+#spreadSheet {
+  padding: 50px;
+  margin: 50px;
+}
+
+#theHeader {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-areas: 'slh wsh deptth starth endh acth';
+  grid-template-columns: 40px 300px 300px 300px 300px 200px;
+  grid-template-rows: 40px;
+}
+
+slh,
+wsh,
+deptth,
+starth,
+endh,
+acth {
+  background-color: steelblue;
+  color: #fff;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
