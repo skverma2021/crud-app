@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <Header position='static'>
       <Toolbar>
-        <Tabs to='/'>Employees</Tabs>
+        <Tabs to='/emp'>Employees</Tabs>
         {/* <Tabs to='/add'>Add</Tabs> */}
         {/* <Tabs to='/upd'>Modify</Tabs>
         <Tabs to='/del'>Delete</Tabs> */}

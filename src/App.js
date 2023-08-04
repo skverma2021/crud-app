@@ -14,6 +14,8 @@ import EmpAllSorted from './component/EmpAllSorted';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookHead from './component/BookHead';
+import TheHome from './component/TheHome';
+import img1 from './img/Designer.png';
 
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
         <Navbar />
         <Routes>
           {/* <Route path='/' element={<EmpAll />} /> */}
-          <Route path='/' element={<EmpAllSorted />} />
+          <Route path='/' element={<TheHome />} />
+          <Route path='/emp' element={<EmpAllSorted />} />
           <Route path='/add' element={<EmpAdd />} />
           <Route path='/upd/:id' element={<EmpUpd />} />
           <Route path='/del' element={<EmpDel />} />
@@ -33,6 +36,7 @@ function App() {
           <Route path='/job/exAdd/:id' element={<JobExPlanAdd />} />
         </Routes>
       </BrowserRouter>
+      {/* <img src={img1} alt='xxx' /> */}
     </>
   );
 }

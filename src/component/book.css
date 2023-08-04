@@ -1,6 +1,6 @@
 #spreadSheet {
-  padding: 50px;
-  margin: 50px;
+  padding: 5px;
+  margin: 5px;
 }
 
 #theHeader {
@@ -10,8 +10,9 @@
 
   display: grid;
   grid-template-areas: 'dth jbh acth ';
-  grid-template-columns: 10% 85% 5%;
-  grid-template-rows: 200px;
+  /* grid-template-columns: 10% 85% 5%; */
+  grid-template-columns: 100px;
+  grid-template-rows: 150px;
 }
 
 dth,
@@ -29,8 +30,9 @@ acth {
 
   display: grid;
   grid-template-areas: 'dt jb act ';
-  grid-template-columns: 10% 85% 5%;
-  grid-template-rows: 50px;
+  /* grid-template-columns: 10% 85% 5%; */
+  grid-template-columns: 100px;
+  grid-template-rows: 30px;
 }
 
 dt,
@@ -38,7 +40,7 @@ jb,
 act {
   background-color: steelblue;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   border: skyblue 1px solid;
 }
 
