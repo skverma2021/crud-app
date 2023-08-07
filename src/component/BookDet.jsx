@@ -3,30 +3,8 @@ import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import './book.css';
 
-// SELECT A.id as wpId,
-// 	booked = isnull((select C.booking from bookings C where ((C.workPlanId = A.id) and (C.dateId = 200))), ''),
-// 	toUpd = (select count(*) from bookings C where ((C.workPlanId = A.id) and (C.dateId = 200)))
-// FROM     workPlan A INNER JOIN
-//                   emp B ON A.depttId = B.curDeptt
-// WHERE  (B.id = 300)
 const BookDet = ({ empId, bookDay }) => {
   const [bData, setBData] = useState([]);
-
-  // useEffect(() => {
-  //   let rec = [];
-  //   wps.map((p) => {
-  //     rec = [
-  //       ...rec,
-  //       {
-  //         theEmp: empId,
-  //         theDayId: bookDay.id,
-  //         theWpId: p.wpId,
-  //         theBooking: '',
-  //       },
-  //     ];
-  //   });
-  //   setBData(rec);
-  // }, [wps]);
 
   useEffect(() => {
     getBookingDet();
@@ -52,25 +30,12 @@ const BookDet = ({ empId, bookDay }) => {
       return updatedBData;
     });
   };
-  //   {
-  //     "theWpId": 38,
-  //     "theBooking": 0,
-  //     "toUpd": 0
-  // }
 
   const handleUpdAdd = () => {
     console.log('Hi');
     bData.map((t) => {
       if (t.toUpd > 0) {
         //update
-        //localhost:3000/api/booking/
-        // req.body
-        //   {
-        //     "empId": 300,
-        //     "workPlanId": 58,
-        //     "dateId": 23179,
-        //     "booking": 0.45
-        // }
         updBooking(empId, t.theWpId, bookDay.id, t.theBooking);
       } else {
         //Add

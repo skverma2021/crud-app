@@ -54,11 +54,16 @@ const BookHead = () => {
   return (
     <>
       <div>
-        {empDet.theName}, {empDet.theDesig}, [{empDet.theGrade}]
+        <u>
+          <strong>{empDet.theName}</strong>, {empDet.theDesig}, [
+          {empDet.theGrade}]
+        </u>
       </div>
       <div>
-        {empDet.theDeptt}, {empDet.theDiscp}, [{empDet.theHrRate}Rs/hr,
-        workPlans:{empDet.curWorkPlans}]
+        <i>
+          {empDet.theDeptt}, {empDet.theDiscp}, [{empDet.theHrRate}Rs/hr,
+          workPlans:{empDet.curWorkPlans}]
+        </i>
       </div>
       <div id='spreadSheet'>
         <div id='theHeader'>
@@ -67,8 +72,12 @@ const BookHead = () => {
             {wpDet.map((t) => {
               return (
                 <div class='item' key={t.wpId}>
-                  <div>{t.nameJob}</div>
-                  <div>{t.nameStage}</div>
+                  <div>
+                    <strong>{t.nameJob}</strong>
+                  </div>
+                  <div>
+                    <i>{t.nameStage}</i>
+                  </div>
                   <div>{t.dtStart}</div>
                   <div>{t.dtEnd}</div>
                   <div>{t.wpId}</div>
